@@ -17,7 +17,10 @@ app.get("/users/:id", (req, res) => {
 
 //post
 app.post("/addUser", (req, res) => {
-  console.log("data received", req.body);
+  //save to database
+ const user= req.body;
+ user.id=55;
+ res.send(user)
 });
 
 app.listen(3000, () => console.log("listening to port 3000"));
